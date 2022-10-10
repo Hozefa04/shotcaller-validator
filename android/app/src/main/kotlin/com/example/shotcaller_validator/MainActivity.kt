@@ -1,4 +1,4 @@
-package com.example.shotcaller_validator
+package com.app.shotcaller_validator
 
 import io.flutter.embedding.android.FlutterActivity
 

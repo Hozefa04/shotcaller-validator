@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "14069045913",
+    "project_id": "shotcaller-nft",
+    "storage_bucket": "shotcaller-nft.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:14069045913:android:a32d1a781c85248ea57608",
+        "android_client_info": {
+          "package_name": "com.app.shotcaller_validator"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "14069045913-5udmuqkbslacekp78un50eih9g9qq2ae.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB7bZDXIKkf_fphBzNoPrlI-2OOpSic34w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "14069045913-5udmuqkbslacekp78un50eih9g9qq2ae.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
