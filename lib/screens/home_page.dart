@@ -40,7 +40,7 @@ class _HomePageState extends State<HomePage> {
   }) async {
     showDialog(
       context: context,
-      barrierDismissible: false,
+      barrierDismissible: true,
       builder: (context) {
         return AlertDialog(
           title: Text(
@@ -89,7 +89,7 @@ class _HomePageState extends State<HomePage> {
           } else {
             showAlert(
               context: context,
-              title: AppStrings.shotcallerNFTTitle,
+              title: snapshot.docs[0].get("nft_name"),
               content: AppStrings.shotcallerNFT,
               onPressed: () async {
                 try {
