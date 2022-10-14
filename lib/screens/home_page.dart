@@ -37,6 +37,7 @@ class _HomePageState extends State<HomePage> {
     required String content,
     required VoidCallback onPressed,
     required String buttonText,
+    bool isCancel = false,
   }) async {
     showDialog(
       context: context,
@@ -49,6 +50,17 @@ class _HomePageState extends State<HomePage> {
           ),
           content: Text(content),
           actions: [
+            isCancel
+                ? TextButton(
+                    onPressed: () {
+                      Navigator.of(context).pop();
+                    },
+                    child: Text(
+                      AppStrings.cancel,
+                      style: const TextStyle(color: AppColors.appGreyColor),
+                    ),
+                  )
+                : Container(),
             TextButton(
               onPressed: onPressed,
               child: Text(
@@ -91,6 +103,7 @@ class _HomePageState extends State<HomePage> {
               context: context,
               title: snapshot.docs[0].get("nft_name"),
               content: AppStrings.shotcallerNFT,
+              isCancel: true,
               onPressed: () async {
                 try {
                   QuerySnapshot snapshot = await FirebaseFirestore.instance
@@ -110,6 +123,14 @@ class _HomePageState extends State<HomePage> {
                     "redeem_time": FieldValue.serverTimestamp(),
                   });
                   Navigator.of(context).pop();
+
+                  showAlert(
+                    context: context,
+                    title: AppStrings.shotcallerNFTTitle,
+                    content: AppStrings.redeemSuccess,
+                    onPressed: () => Navigator.of(context).pop(),
+                    buttonText: AppStrings.okButton,
+                  );
                 } catch (e) {
                   if (kDebugMode) {
                     print(e);

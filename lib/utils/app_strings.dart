@@ -12,4 +12,6 @@ class AppStrings {
   static String okButton = "OK";
   static String redeemBtn = "REDEEM";
   static String logoPath = "assets/logo.png";
+  static String cancel = "CANCEL";
+  static String redeemSuccess = "The NFT has been redeemed successfully 🎉";
 }
